@@ -1,6 +1,6 @@
 # OntoMutate
 
-A prototype for mutation of OWL ontology with respect to entailment constraints
+A prototype for mutation of knowledge graphs with respect to robustness masks
 
 ## Requirements
  - Java JRE and JDK
@@ -25,7 +25,7 @@ Each folder for the masks contains a file `mask_development.txt` that explains, 
 
 ## Replication of Evaluation for ISSRE Publication
 
-The easiest way to replicate our results is to use the following [VM](https://uio-my.sharepoint.com/:u:/g/personal/tobiajoh_uio_no/EVkFViKo7dtAgritMhWYS6oBq591Vacvx2-IrKly5vpxng?e=rDvKUX) where all SUTs are already implemented. If you want to install everything yourself, you can find instructions on how to do so in the next subsection.
+The easiest way to replicate our results is to use the following [VM](https://zenodo.org/records/12699141) where all SUTs are already implemented. If you want to install everything yourself, you can find instructions on how to do so in the next subsection.
 
  - `generate_graph.sh` generates the graph from the paper. The PDF output is put into a folder `results`. (This script requires a LaTex installation to produce the PDF.) The run time of the script is a few minutes.
  - `replicate_geo.sh` generates the mutants for the geo system and executes the test runs for all of them. The mutants are saved in folder [sut/geo/mutatedOnt](sut/geo/mutatedOnt) and the results of the test runs in [sut/geo/testResults](sut/geo/testResults). On our machine (Intel Core i7-1165G7) this took about 100 hours.
@@ -46,8 +46,6 @@ You can use the script `install_suts.sh` to install all the necessary software. 
 
   - `sudo apt install default-jdk`
 - install [gradle](https://gradle.org/install/)
-- get branch `geosim` from fork of simulator from [github](https://github.com/tobiaswjohn/SemanticObjects) and clone it in some `FOLDER`. I.e. use
-  
-  `git clone -b geosim https://github.com/tobiaswjohn/SemanticObjects`
+- get the geo simulator form the fork [here](https://anonymous.4open.science/r/SemanticObjects-FF2C/README.md) copy it in some `FOLDER`.
 - insert the path of the cloned repository, i.e. `FOLDER/SemanticObjects`,  in the [config file](sut/geo/config.txt). (can be relative or absolute path)
 - call `build_geo.sh`
