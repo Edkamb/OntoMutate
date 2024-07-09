@@ -1,4 +1,4 @@
-package org.smolang.robust.mutant
+package org.XXXX100.robust.mutant
 
 import openllet.atom.OpenError
 import openllet.owlapi.OpenlletReasoner

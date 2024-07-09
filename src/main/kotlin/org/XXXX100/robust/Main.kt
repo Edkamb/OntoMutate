@@ -1,4 +1,4 @@
-package org.smolang.robust
+package org.XXXX100.robust
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.options.default
@@ -10,11 +10,11 @@ import com.github.ajalt.clikt.parameters.types.int
 import org.apache.jena.riot.Lang
 import org.apache.jena.riot.RDFDataMgr
 import org.apache.jena.shacl.Shapes
-import org.smolang.robust.domainSpecific.geo.GeoScenarioGenerator
-import org.smolang.robust.domainSpecific.geo.GeoTestCaseGenerator
-import org.smolang.robust.domainSpecific.suave.*
-import org.smolang.robust.mutant.*
-import org.smolang.robust.sut.MiniPipeInspection
+import org.XXXX100.robust.domainSpecific.geo.GeoScenarioGenerator
+import org.XXXX100.robust.domainSpecific.geo.GeoTestCaseGenerator
+import org.XXXX100.robust.domainSpecific.suave.*
+import org.XXXX100.robust.mutant.*
+import org.XXXX100.robust.sut.MiniPipeInspection
 import java.io.File
 import kotlin.random.Random
 import kotlin.system.exitProcess
@@ -141,10 +141,10 @@ class Main : CliktCommand() {
 
         // mutated ontology with "add pipe" at segment1
         println("\nApply mutation to ontology")
-        val segment = input.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#segment1")
-        val configSegment = org.smolang.robust.domainSpecific.auv.AddPipeSegmentConfiguration(segment)
+        val segment = input.createResource("http://www.anon.anon/miniPipes#segment1")
+        val configSegment = org.XXXX100.robust.domainSpecific.auv.AddPipeSegmentConfiguration(segment)
         val msSegment = MutationSequence(verbose)
-        msSegment.addWithConfig(org.smolang.robust.domainSpecific.auv.AddPipeSegmentMutation::class, configSegment)
+        msSegment.addWithConfig(org.XXXX100.robust.domainSpecific.auv.AddPipeSegmentMutation::class, configSegment)
         val mSegment = Mutator(msSegment, verbose)
         val resSegment = mSegment.mutate(input)
 

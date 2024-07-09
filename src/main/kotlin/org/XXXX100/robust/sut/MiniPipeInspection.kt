@@ -1,4 +1,4 @@
-package org.smolang.robust.sut
+package org.XXXX100.robust.sut
 
 import org.apache.jena.rdf.model.Model
 import org.apache.jena.rdf.model.ModelFactory
@@ -14,12 +14,12 @@ class MiniPipeInspection {
     var ontology : Model? = null
     private val mf = ModelFactory.createDefaultModel()!!
 
-    private val infraClass = mf.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#Infrastructure")!!
+    private val infraClass = mf.createResource("http://www.anon.anon/miniPipes#Infrastructure")!!
 
 
     private fun move (thing: Resource, goal : Resource) {
         // "delete all old positions, set new position"
-        val isAtProp = mf.createProperty("http://www.ifi.uio.no/tobiajoh/miniPipes#isAt")
+        val isAtProp = mf.createProperty("http://www.anon.anon/miniPipes#isAt")
         val r = MyReasoner(ontology as Model)
 
         val newOntology = ModelFactory.createDefaultModel()
@@ -42,7 +42,7 @@ class MiniPipeInspection {
 
         // "collect all things that are connected via 'nextTo' "
         var ret = setOf<Resource>()
-        val isNextProp = mf.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#nextTo")
+        val isNextProp = mf.createResource("http://www.anon.anon/miniPipes#nextTo")
         val r = MyReasoner(ontology as Model)
         for (axiom in r.allOutgoingRelations(thing))
             if (axiom.predicate.equals(isNextProp))
@@ -53,7 +53,7 @@ class MiniPipeInspection {
 
     private fun isAt(thing: Resource) : Resource? {
         // "returns the FIRST thing you find where the thing isAt"
-        val isAtProp = mf.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#isAt")
+        val isAtProp = mf.createResource("http://www.anon.anon/miniPipes#isAt")
         val r = MyReasoner(ontology as Model)
         for (axiom in r.allOutgoingRelations(thing))
             if (axiom.predicate.equals(isAtProp))
@@ -62,8 +62,8 @@ class MiniPipeInspection {
     }
 
     private fun visited(thing: Resource) : Boolean {
-        val hasStatus = mf.createProperty("http://www.ifi.uio.no/tobiajoh/miniPipes#hasStatus")
-        val visited = mf.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#visited")
+        val hasStatus = mf.createProperty("http://www.anon.anon/miniPipes#hasStatus")
+        val visited = mf.createResource("http://www.anon.anon/miniPipes#visited")
         val r = MyReasoner(ontology as Model)
 
         for (axiom in r.allOutgoingRelations(thing))
@@ -74,8 +74,8 @@ class MiniPipeInspection {
     }
 
     private fun visited(thing: Resource, r : MyReasoner) : Boolean {
-        val hasStatus = mf.createProperty("http://www.ifi.uio.no/tobiajoh/miniPipes#hasStatus")
-        val visited = mf.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#visited")
+        val hasStatus = mf.createProperty("http://www.anon.anon/miniPipes#hasStatus")
+        val visited = mf.createResource("http://www.anon.anon/miniPipes#visited")
 
         for (axiom in r.allOutgoingRelations(thing))
             if (axiom.predicate.equals(hasStatus) && axiom.`object`.equals(visited))
@@ -85,8 +85,8 @@ class MiniPipeInspection {
     }
 
     private fun inspect(thing: Resource) {
-        val hasStatus = mf.createProperty("http://www.ifi.uio.no/tobiajoh/miniPipes#hasStatus")
-        val visited = mf.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#visited")
+        val hasStatus = mf.createProperty("http://www.anon.anon/miniPipes#hasStatus")
+        val visited = mf.createResource("http://www.anon.anon/miniPipes#visited")
         ontology?.add( mf.createStatement(
             thing,
             hasStatus,
@@ -96,7 +96,7 @@ class MiniPipeInspection {
         println(thing.localName + " gets inspected")
     }
     private fun notAnimal(thing: Resource) : Boolean {
-        val animalClass = mf.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#Animal")
+        val animalClass = mf.createResource("http://www.anon.anon/miniPipes#Animal")
         val r = MyReasoner(ontology as Model)
         return !r.allIndividuals(animalClass).contains(thing)
     }
@@ -136,7 +136,7 @@ class MiniPipeInspection {
     fun doInspection() {
         // "implement inspection agorithm"
         println("\nWohooo! Let's start a new inspection of the infrastructure.")
-        val auv = mf.createResource("http://www.ifi.uio.no/tobiajoh/miniPipes#auv")
+        val auv = mf.createResource("http://www.anon.anon/miniPipes#auv")
         val position = isAt(auv)
         if (position == null) {
             println("ERROR: position unknown. I can not inspect anything.")

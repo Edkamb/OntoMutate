@@ -1,11 +1,11 @@
-package org.smolang.robust.domainSpecific.suave
+package org.XXXX100.robust.domainSpecific.suave
 
-import org.smolang.robust.mutant.*
+import org.XXXX100.robust.mutant.*
 import org.apache.jena.rdf.model.ModelFactory
 import org.apache.jena.rdf.model.Statement
 import org.apache.jena.riot.Lang
 import org.apache.jena.riot.RDFDataMgr
-import org.smolang.robust.randomGenerator
+import org.XXXX100.robust.randomGenerator
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.Paths

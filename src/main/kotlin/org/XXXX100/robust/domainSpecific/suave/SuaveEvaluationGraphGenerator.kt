@@ -1,8 +1,8 @@
-package org.smolang.robust.domainSpecific.suave
+package org.XXXX100.robust.domainSpecific.suave
 
 import org.apache.jena.riot.RDFDataMgr
 import org.apache.jena.shacl.Shapes
-import org.smolang.robust.mutant.RobustnessMask
+import org.XXXX100.robust.mutant.RobustnessMask
 import java.io.File
 import java.io.FileOutputStream
 

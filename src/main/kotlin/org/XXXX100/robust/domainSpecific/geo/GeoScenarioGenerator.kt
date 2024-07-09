@@ -1,4 +1,4 @@
-package org.smolang.robust.domainSpecific.geo
+package org.XXXX100.robust.domainSpecific.geo
 
 import java.io.File
 import java.io.FileOutputStream
@@ -15,12 +15,12 @@ class GeoScenarioGenerator {
     private val files : MutableList<Pair<File,Boolean>> = mutableListOf()
     fun  generateScenarios(count : Int) {
         // generate scenario main blocks
-        "python3 generateScenarios.py scenarios $count".runCommand(File("org/smolang/robust/sut/geo"))
+        "python3 generateScenarios.py scenarios $count".runCommand(File("org/XXXX100/robust/sut/geo"))
 
         // iterate over scenarios
-        val dir = File("org/smolang/robust/sut/geo/scenarios")
+        val dir = File("org/XXXX100/robust/sut/geo/scenarios")
         val pattern = Regex("sut/geo/scenarios/Output.*.txt")
-        val header = "org/smolang/robust/sut/geo/scenarios/header.smol"
+        val header = "org/XXXX100/robust/sut/geo/scenarios/header.smol"
 
         var i = 0
 

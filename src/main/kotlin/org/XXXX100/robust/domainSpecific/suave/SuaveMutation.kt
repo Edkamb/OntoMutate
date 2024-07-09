@@ -1,6 +1,6 @@
-package org.smolang.robust.domainSpecific.suave
+package org.XXXX100.robust.domainSpecific.suave
 
-import org.smolang.robust.mutant.*
+import org.XXXX100.robust.mutant.*
 import org.apache.jena.rdf.model.Model
 
 /**

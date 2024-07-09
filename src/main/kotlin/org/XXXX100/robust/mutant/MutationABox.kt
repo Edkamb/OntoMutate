@@ -1,9 +1,9 @@
-package org.smolang.robust.mutant
+package org.XXXX100.robust.mutant
 
 import org.apache.jena.query.QueryExecutionFactory
 import org.apache.jena.query.QueryFactory
 import org.apache.jena.rdf.model.*
-import org.smolang.robust.randomGenerator
+import org.XXXX100.robust.randomGenerator
 
 
 class AddInstanceMutation(model: Model, verbose : Boolean) : Mutation(model, verbose) {

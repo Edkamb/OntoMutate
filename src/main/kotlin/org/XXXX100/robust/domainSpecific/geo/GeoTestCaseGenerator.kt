@@ -1,9 +1,9 @@
-package org.smolang.robust.domainSpecific.geo
+package org.XXXX100.robust.domainSpecific.geo
 
-import org.smolang.robust.mutant.*
+import org.XXXX100.robust.mutant.*
 import org.apache.jena.riot.RDFDataMgr
 import org.apache.jena.shacl.Shapes
-import org.smolang.robust.randomGenerator
+import org.XXXX100.robust.randomGenerator
 
 class GeoTestCaseGenerator(val verbose: Boolean) : TestCaseGenerator(verbose) {
 

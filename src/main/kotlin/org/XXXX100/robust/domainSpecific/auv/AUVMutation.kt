@@ -1,15 +1,15 @@
-package org.smolang.robust.domainSpecific.auv
+package org.XXXX100.robust.domainSpecific.auv
 
-import org.smolang.robust.mutant.*
+import org.XXXX100.robust.mutant.*
 import org.apache.jena.rdf.model.Model
 import org.apache.jena.rdf.model.Resource
-import org.smolang.robust.randomGenerator
+import org.XXXX100.robust.randomGenerator
 
 /**
  * all the domain-dependent mutation operators that are specific for the auv domain
  */
 abstract class AUVMutation(model: Model, verbose: Boolean) : Mutation(model, verbose) {
-    val auvURI = "http://www.ifi.uio.no/tobiajoh/miniPipes"
+    val auvURI = "http://www.anon.anon/miniPipes"
     val delimiter = "#"
     val pipeSegmentClass: Resource = model.createResource(auvURI + delimiter + "PipeSegment")
 

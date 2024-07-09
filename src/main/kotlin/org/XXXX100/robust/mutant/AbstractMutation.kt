@@ -1,4 +1,4 @@
-package org.smolang.robust.mutant
+package org.XXXX100.robust.mutant
 
 import org.apache.jena.rdf.model.Model
 import org.apache.jena.rdf.model.Statement

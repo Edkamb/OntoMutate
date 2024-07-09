@@ -1,11 +1,11 @@
-package org.smolang.robust.mutant
+package org.XXXX100.robust.mutant
 
 import org.apache.jena.query.QueryExecutionFactory
 import org.apache.jena.query.QueryFactory
 import org.apache.jena.rdf.model.*
 import org.apache.jena.reasoner.Reasoner
 import org.apache.jena.reasoner.ReasonerRegistry
-import org.smolang.robust.randomGenerator
+import org.XXXX100.robust.randomGenerator
 
 open class Mutation(var model: Model, val verbose : Boolean) {
     var hasConfig : Boolean = false

@@ -1,7 +1,7 @@
-package org.smolang.robust.mutant
+package org.XXXX100.robust.mutant
 
 import org.apache.jena.rdf.model.Statement
-import org.smolang.robust.randomGenerator
+import org.XXXX100.robust.randomGenerator
 import kotlin.reflect.KClass
 
 
