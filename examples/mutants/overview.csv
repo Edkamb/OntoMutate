@@ -1,2 +1,0 @@
-id,mutantFile,numDel,numAdd,affectedSeedNodes
-0,examples/mutants/mutant0.ttl,5,5,[s A a C B b c r NamedIndividual]
