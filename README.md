@@ -33,8 +33,6 @@ The easiest way to replicate our results is to use the following [VM](https://ze
 
 
 ### Installation of SUTs
-You can use the script `install_suts.sh` to install all the necessary software. The last part of the script is rebooting, to make the installment permanent
-
 #### SUAVE (docker)
  - see [website](https://docs.docker.com/engine/install/ubuntu/)
  - add to groups, e.g. following [this website](https://docs.docker.com/engine/install/linux-postinstall/)
