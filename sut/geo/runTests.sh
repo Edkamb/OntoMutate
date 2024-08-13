@@ -13,6 +13,7 @@ TimeStart="$(date -u +%s)"
 ontologies=$1
 scenario=$2
 temp_oracle_output=temp/oracle_output_temp.txt
+mkdir temp
 
 
 hostname=$(hostname)
